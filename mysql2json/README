@@ -1,0 +1,31 @@
+ This is MySQL2JSON, a little Ruby library for serializing an entire MySQL database and saving it in a JSON file.
+ It seemed to be more usable than marshalling when you need to serialize or backup a database.
+ 
+ Author: Shandrikov Vadim, wadzime@tut.by
+ Join my groups on LinkedIn
+ 
+ There are a pair of questions appearing when you face this library:
+  
+ 1. Why JSON?
+    Because JSON is the most suitable format for storing such data structures and transferring it across Internet. Besides, this is the "native" data format for JavaScript.
+
+ 2. Why Ruby? 
+    It's clear, I reckon=)
+ 
+ Install:
+ 
+ ruby setup.rb
+ 
+ Use:
+ 
+ This snippet of code will dump databases 'information_schema' and 'test' into 2 JSON files with appropriate names:
+ >mysql2json=MySQL2JSON.new(:server=>'192.168.1.1',:password=>'my_password',:db_list=>['information_schema','test'])
+ 
+ 
+ This snippet of code will dump an entire MySQL database into set of JSON files:
+ >mysql2json=MySQL2JSON.new(:server=>'192.168.1.1',:password=>'my_password')
+ 
+
+ 
+ 
+ 
